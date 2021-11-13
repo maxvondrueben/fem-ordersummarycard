@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order Summary</title>
+
+  <style>
+    /* Attribution */
+    .attribution {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    /* Basics */
+    :root {
+      --primary-1: hsl(225, 100%, 94%);
+      --primary-2: hsl(245, 75%, 52%);
+      --neutral-1: hsl(225, 100%, 98%);
+      --neutral-2: hsl(224, 23%, 55%);
+      --neutral-3: hsl(223, 47%, 23%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    /* Utility */
+    .btn {
+      display: block;
+
+      padding: 0.8rem;
+      margin: 2rem 0;
+      color: var(--neutral-1);
+      text-decoration: none;
+      border-radius: 10px;
+      background-color: var(--primary-2);
+      -webkit-box-shadow: 0px 22px 35px 1px hsla(245, 75%, 52%, 0.25);
+      box-shadow: 0px 22px 35px 1px hsla(245, 75%, 52%, 0.25);
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    .hidden {
+      visibility: hidden;
+    }
+
+    .font-weight-900 {
+      font-weight: 900;
+    }
+
+    .font-weight-700 {
+      font-weight: 700;
+    }
+
+    .font-color-neutral-2 {
+      color: var(--neutral-2);
+    }
+
+    .font-color-neutral-3 {
+      color: var(--neutral-3);
+    }
+
+    .hover-1:hover {
+      text-decoration: none;
+    }
+
+    .hover-2:hover {
+      color: var(--neutral-3);
+    }
+
+    .hover-2 {
+      text-decoration: none;
+    }
+
+    /* Body */
+    body {
+      height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 500;
+      background: url("images/pattern-background-desktop.svg") no-repeat top center;
+      background-color: var(--primary-1);
+      background-size: contain;
+
+      line-height: 1.5;
+    }
+
+    /* Card */
+    #card {
+      height: 700px;
+      width: 450px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      border-radius: 15px;
+      background-color: #fff;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card-bottom {
+      width: 80%;
+    }
+
+    .annual-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      padding: 0.8rem;
+      background-color: var(--neutral-1);
+      border-radius: 15px;
+    }
+
+    .annual-box img {
+      width: 15%;
+      margin-right: 0.4rem;
+    }
+
+    .card-bottom h2,
+    .card-bottom p,
+    .card-bottom div {
+      margin: 1rem 0;
+    }
+
+    .card-bottom h2 {
+      margin-top: 2rem;
+    }
+
+    /* Mobile */
+    @media(max-width: 600px) {
+      #card {
+        width: 325px;
+        height: 600px;
+      }
+
+      .annual-box {
+        gap: 0;
+        padding: 0.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="card">
+
+    <div class="card-top">
+      <img src="images/illustration-hero.svg" alt="hero-image">
+    </div>
+
+    <div class="card-bottom">
+      <h2 class="font-weight-900 font-color-neutral-3">Order Summary</h2>
+      <p class="font-color-neutral-2">
+        You can now listen to millions of songs, audiobooks, and podcasts on any
+        device anywhere you like!
+      </p>
+      <div class="annual-box">
+        <img src="images/icon-music.svg" alt="">
+        <p><span class="font-weight-900 font-color-neutral-3">Annual Plan</span> <br> <span
+            class="font-color-neutral-2">$59.99/year</span>
+        </p>
+        <a href="#" class="hidden">Change</a>
+        <a href="#" class="hover-1 font-color-primary-2">Change</a>
+      </div>
+      <a href="#" class="btn font-weight-700">Proceed to Payment</a>
+      <a href="#" class="font-weight-700 font-color-neutral-2 hover-2"><span>Cancel Order</span></a>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by Max.
+  </div>
+</body>
+
+</html>
